@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grib;
+    place-items: center;
+    background: url("background.svg") no-repeat center / cover;
+    font-family: "Ubuntu", sans-serif;
+    animation: bg-move 8s infinite alternate linear;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 48px 32px;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== HEADER ===== */
+.login-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: rgba(0, 0, 0, 0.45);
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+/* ===== FORM ===== */
+.login-form {
+    display: grib;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input {
+    height: 52px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 14px;
+    border: 2px solid #e5e5e5;
+    transition: border-color 0.3, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #216ce8;
+    box-shadow: 0 0 0 3px rgba(33, 108, 232, 0.2);
+}
+
+/* ===== OPTIONS ===== */
+.form-options {
+    text-align: right;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #216ce8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #10440a;
+}
+
+/* ===== BUTTON ===== */
+.login-btn {
+    margin-top: 10px;
+    height: 54px;
+    border-radius: 14px;
+    border: none;
+    background: #216ce8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: backgrond 0.3s, tranform 0.2s;
+}
+
+.login-btn:hover {
+    background: #10440a;
+    transform: translateY(-2px);
+}
+
+/* ===== BACKGROUND ANIMATION ===== */
+@keyframes bg-move {
+    100% {
+        background-position: 20% 50%;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 530) {
+    .login-card {
+        padding: 66px 40px;
+    }
+}
